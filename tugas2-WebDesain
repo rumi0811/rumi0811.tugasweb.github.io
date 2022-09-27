@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>Pendataan Mahasiswa Baru</title>
+
+<script languange =”JavaScript”>
+function alertx(data){
+var nim =(document.data.nim.value);
+var nama =(document.data.nama.value);
+var fakultas =(document.data.fakultas.value);
+
+var ket = "";
+if (document.data.wanita.checked == true){
+ketx = "Wanita";
+}
+if (document.data.wanita.checked == false && document.data.Wanita.checked == false || document.data.alamat.value == false ){
+ketx = "";
+}
+else if (document.data.Wanita.checked == true){
+ketx = "Pria";
+}
+
+var agama =(document.data.agama.value);
+
+var ket = "";
+var ket1 = "";
+var ket2 = "";
+var ket3 = "";
+if (document.data.browsing.checked == true){
+ket = "Browsing";
+}
+
+if (document.data.baca.checked == true){
+ket1 = " Membaca Buku";
+}
+if (document.data.bermain.checked == true){
+ket2 = " Bermain";
+}
+if (document.data.hacking.checked == true){
+ket3 = " Hacking";
+}
+
+var alamat =(document.data.alamat.value);
+
+{
+if(document.data.nim.value === false || document.data.nama.value == false ){
+alert (" NIM dan nama harus diisi!!!"+ket3);
+}else{
+alert("ket3Selamat Datang Di \nFORM INPUT DATA MAHASISWA");
+alert ("ket3NIM\t\t\t\t :\t" + nim + "ket3\nNama\t\t\t :\t" + nama+ "ket3\nFakultas\t\t\t :\t" +fakultas+ "ket3\nJenis Kelamin\t :\t" +ketx+ "ket3\nAgama\t\t\t :\t" +agama+ "ket3\nHobi\t\t\t :\t" +ket+ "ket3" +ket1+ "ket3" +ket2+ "ket3" +ket3+ "ket3\nAlamat\t\t\t :\t" +alamat);
+alert("ket3Terimakasih telah Mengisi \nFORM INPUT DATA MAHASISWA");
+}
+}
+}
+</script>
+</head>
+
+<body>
+
+<div>
+<h3>Pendataan Mahasiswa Baru</h3>
+<table border="0" cellpadding="" cellspacing="">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td>
+<form name="data" method="post" action=">
+<table width="371" border="0">
+
+<tr>
+<td colspan="3"><div align="center"></div></td>
+</tr>
+
+<tr>
+<td width="95">NIM</td>
+<td width="1">:</td>
+<td width="253">
+<label>
+<input type="text" name="nim" value="" required>
+</label>
+</td>
+</tr>
+
+<tr>
+<td>Nama</td>
+<td>:</td>
+<td>
+<label>
+<input type="text" name="nama" value=""" required>
+</label>
+</td>
+</tr>
+
+<tr>
+<td>Fakultas</td>
+<td>:</td>
+<td>
+<select name="fakultas">
+<option>Pilih Fakultas</option>
+<option>Kedokteran</option>
+<option>Informatika</option>
+<option>Bisnis</option>
+<option>Kehutanan</option>
+<option>Ekonomi</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Jenis Kelamin </td>
+<td>:</td>
+<td>
+<input type="radio" value="wanita" name="wanita">Wanita
+<input type="radio" value="Pria" name="Wanita">Pria
+</td>
+</tr>
+
+<tr>
+<td>Agama</td>
+<td>:</td>
+<td>
+<select name="agama">
+<option>Pilih Agama</option>
+<option>Islam</option>
+<option>Kristen</option>
+<option>Hindu</option>
+<option>Budha</option>
+<option>Kong Hu Chu</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td height="45">Hobby</td>
+<td>:</td>
+<td>
+<label>
+<input type="checkbox" name="browsing" value="on">Cosplay
+</label>
+<label>
+<input type="checkbox" name="baca" value="on">Nonton Anime
+</label> <br>
+<label>
+<input type="checkbox" name="bermain" value="on">Koleksi Manga
+</label>
+<label>
+<input type="checkbox" name="hacking" value="on">Koleksi Action Figure
+</label>
+</td>
+</tr>
+
+<tr>
+<td>Alamat</td>
+<td>:</td>
+<td>
+<label>
+<textarea type="text" name="alamat" required></textarea>
+</label>
+</td>
+</tr>
+
+<tr>
+<td colspan="3"><div align="center">
+<input name="" type="submit" value="proses" onClick="alertx(this.data)">
+<input name="" type="reset"></div>
+</td>
+</tr>
+
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>
